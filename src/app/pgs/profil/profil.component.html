@@ -1,0 +1,30 @@
+<div class="profile-card">
+  <img class="avatar" src="baseprof.jpg" alt="Avatar">
+
+  <h2>{{ user?.name }}</h2>
+  <p>{{ user?.email }}</p>
+  <p class="bio">Köszönjük, hogy minket választottál!</p>
+  <button mat-raised-button color="warn" (click)="deleteProfile()">Profil törlése</button>
+  <p *ngIf="deleteMessage" style="color: red; margin-top: 10px;">
+    {{ deleteMessage }}
+  </p>
+<button mat-raised-button color="accent" (click)="logout()">
+  Kijelentkezés
+</button>
+  <hr style="margin: 2rem 0;">
+  <h3>Jelszó megváltoztatása</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Új jelszó</mat-label>
+    <input matInput [(ngModel)]="newPassword" type="password">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Jelszó megerősítése</mat-label>
+    <input matInput [(ngModel)]="confirmPassword" type="password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="changePassword()">
+    Jelszó módosítása
+  </button>
+  <p *ngIf="passwordChangeMessage" style="color: green; margin-top: 10px;">
+    {{ passwordChangeMessage }}
+  </p>
+</div>

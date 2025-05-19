@@ -1,0 +1,12 @@
+<h2>Kosár tartalma</h2>
+<ul *ngIf="cartItems.length > 0; else empty">
+<li *ngFor="let item of cartItems; let i = index">
+  {{ item.name }} – {{ item.price | form }}
+  <button (click)="removeItem(i)">❌</button>
+</li>
+</ul>
+<ng-template #empty>
+  <p>A kosár üres.</p>
+</ng-template>
+<h3 *ngIf="cartItems.length > 0">Fizetendő összeg: {{ total | form  }}</h3>
+<button *ngIf="cartItems.length > 0" (click)="clearCart()">Kosár ürítése</button>

@@ -1,0 +1,8 @@
+<main class="product-list">
+  <article class="product-card" *ngFor="let product of products">
+    <img [src]="product.image" [alt]="product.name" />
+    <h2>{{ product.name | imgname}}</h2>
+    <p class="price">{{ product.price | form }}</p>
+    <button class="btn-add-cart" (click)="addToCart(product.name)">Kosárba tesz</button>
+  </article>
+</main>

@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <span class="brand">Rubin Webshop</span>
+  <span class="spacer"></span>
+  <mat-button-toggle-group>
+    <mat-button-toggle>
+      <a mat-icon-button routerLink="/home" matTooltip="Kezdőlap">
+        <mat-icon>home</mat-icon>
+      </a>
+    </mat-button-toggle>
+    <mat-button-toggle>
+      <a mat-icon-button routerLink="/ekszerek" matTooltip="Ékszerek">
+        <mat-icon>diamond</mat-icon>
+      </a>
+    </mat-button-toggle>
+    <ng-container *ngIf="!isLoggedIn">
+      <mat-button-toggle>
+        <a mat-icon-button routerLink="/login" matTooltip="Bejelentkezés">
+          <mat-icon>login</mat-icon>
+        </a>
+      </mat-button-toggle>
+      <mat-button-toggle>
+        <a mat-icon-button routerLink="/regist" matTooltip="Regisztráció">
+          <mat-icon>person_add</mat-icon>
+        </a>
+      </mat-button-toggle>
+    </ng-container>
+    <ng-container *ngIf="isLoggedIn">
+      <mat-button-toggle>
+        <a mat-icon-button routerLink="/profil" matTooltip="Profil">
+          <mat-icon>person</mat-icon>
+        </a>
+      </mat-button-toggle>
+        <mat-button-toggle>
+    <a mat-icon-button routerLink="/kosar" matTooltip="Kosár">
+      <mat-icon>shopping_cart</mat-icon>
+    </a>
+  </mat-button-toggle>
+    </ng-container>
+  </mat-button-toggle-group>
+</mat-toolbar>

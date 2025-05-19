@@ -1,0 +1,21 @@
+<main class="homec">
+  <section class="hello">
+    <h1 [ngClass]="'post'">Fedezd fel a ragyogás világát!</h1>
+    <p>Válassz egyedi ékszereink közül, melyekkel minden pillanat különlegessé válik.</p>
+    <button mat-raised-button color="red" matTooltip="Nézd meg ékszereinket!" (click)="ekszerekre()">Vásárolj most</button>
+  </section>
+  <section class="features-section">
+    <div class="feature" [ngStyle]="{ 'border': '1px solid #f8b500' }">
+      <h3>Prémium minőség</h3>
+      <p>Minden darab gondos kézműves munka eredménye.</p>
+    </div>
+    <div class="feature" [ngStyle]="{ 'border': '1px solid #f8b500' }">
+      <h3>Gyors szállítás</h3>
+      <p>Expressz kiszállítás 1-2 munkanapon belül.</p>
+    </div>
+    <div class="feature" [ngStyle]="{ 'border': '1px solid #f8b500' }">
+      <h3>Elégedettségi garancia</h3>
+      <p>Segítőkész ügyfélszolgálat, hogy mindig elégedett legyél.</p>
+    </div>
+  </section>
+</main>
